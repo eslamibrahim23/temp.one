@@ -1,0 +1,91 @@
+* {
+    padding: 0;
+    margin: 0;
+}
+
+
+.parent {
+    font-size: 20px;
+    margin: 10px;
+    grid-gap: 10px;
+    color: black;
+    display: grid;
+    grid-template-areas: 'NavBar NavBar NavBar NavBar'
+        'SideBar Main Main Main'
+        'SideBar Content1 Content2 Content3'
+        'SideBar Footer Footer Footer';
+    grid-template-rows: 40px 280px 250px 80px;
+}
+
+.body {
+    border: 3px solid white;
+    border-radius: 15px;
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    background-color: aquamarine;
+}
+
+nav {
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(16, 96, 68);
+    grid-area: NavBar;
+}
+
+.Main {
+    grid-area: Main;
+}
+
+.SideBar {
+    display: flex;
+    justify-content: center;
+    align-items: start;
+    grid-area: SideBar;
+}
+
+.Content1 {
+    grid-area: Content1;
+}
+
+.Content2 {
+    grid-area: Content2;
+}
+
+.Content3 {
+    grid-area: Content3;
+}
+
+footer {
+    border: 3px solid white;
+    border-radius: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(30, 158, 113);
+    grid-area: Footer;
+}
+
+@media (max-width: 767px) {
+
+    .large {
+        display: none;
+    }
+    .parent { 
+        grid-gap: 5px;
+        color: rgb(65, 19, 19);
+        display: grid;
+        grid-template-areas: 'NavBar'
+            'SideBar'
+            'Main'
+            'Content1'
+            'Content2'
+            'Content3'
+            'Footer';
+        grid-template-rows: 40px 40px 180px 80px 80px 80px 60px;
+    }
+
+}
